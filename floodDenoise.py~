@@ -8,7 +8,7 @@ import sys
 #是我dfs写的有问题吗。。不加最大深度会爆栈，真的是有问题。。
 sys.setrecursionlimit(160*60)
 #全局定义太多差评。。。
-filename = 'pic/2.jpg'
+filename = '2.jpg'
 img = Image.open(filename)
 img = img.convert('L')
 
