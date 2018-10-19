@@ -23,7 +23,7 @@ def detect(img,T):
                 if img.getpixel((nx,ny)) == 255:
                     acc += 1
             #避免无效更新，加入随机函数
-            if acc == T:
+            if T%2 == 0 and acc == T:
                 if np.random.rand() > 0.5:
                     continue
             if acc >= T:
@@ -45,8 +45,8 @@ def get_image(filename):
 if __name__ == '__main__':
     filename = 'pic/wb2.jpg'
     img = get_image(filename)
-    img = denoise(img, 4, 15)
-    img.save('pic/new_wb2.jpg')
+    img = denoise(img, 4, 12)
+    img.save('pic/new_wb3.jpg')
     img.show()
     
 
